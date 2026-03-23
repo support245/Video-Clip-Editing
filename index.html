@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<title>Lucid Strategy · 30 Free Clips</title>
+
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+:root{
+--bg:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--subtle:#94a3b8;
+--border:#e5e7eb;
+--accent:#f59e0b;
+--heading:#0b2a5b;
+--ctaNavy:#0a2d66;
+--link:#1f4ea3;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+line-height:1.5;
+width:100%;
+overflow-x:hidden;
+}
+
+.shell{
+width:100%;
+max-width:1100px;
+margin:0 auto;
+padding:5% 5% 10% 5%;
+text-align:center;
+}
+
+.kicker{
+font-size:.8rem;
+font-weight:800;
+letter-spacing:.12em;
+color:var(--accent);
+text-transform:uppercase;
+margin-bottom:1%;
+}
+
+.tag{
+font-size:.75rem;
+font-weight:700;
+letter-spacing:.12em;
+color:#64748b;
+text-transform:uppercase;
+margin-bottom:1%;
+}
+
+h1{
+margin:0 0 1.5% 0;
+font-size:clamp(2rem,7vw,3.5rem);
+color:var(--heading);
+text-transform:uppercase;
+line-height:1.2;
+}
+
+.subtitle{
+color:var(--link);
+font-size:clamp(1rem,4vw,1.3rem);
+margin-bottom:2%;
+}
+
+.summary{
+width:90%;
+max-width:780px;
+margin:0 auto 4% auto;
+color:var(--muted);
+font-size:clamp(.95rem,3.5vw,1.1rem);
+line-height:1.6;
+}
+
+.divider{
+border-top:1px solid var(--border);
+margin:5% auto;
+width:80%;
+max-width:800px;
+}
+
+.offer-box{
+margin:0 auto 5% auto;
+max-width:850px;
+text-align:left;
+border:1px solid var(--border);
+border-radius:6px;
+overflow:hidden;
+background:#fff;
+}
+
+.offer-header{
+padding:24px 24px 12px 24px;
+border-bottom:1px solid var(--border);
+}
+
+.offer-title{
+font-size:clamp(1.5rem,5vw,2.4rem);
+font-weight:900;
+color:var(--heading);
+line-height:1.2;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.offer-stat{
+font-size:clamp(2.2rem,7vw,4rem);
+font-weight:900;
+color:var(--heading);
+line-height:1;
+margin:8px 0 12px 0;
+}
+
+.offer-subtext{
+color:var(--muted);
+font-size:1.1rem;
+line-height:1.6;
+}
+
+.offer-body{
+padding:18px 24px 24px 24px;
+}
+
+.checklist{
+display:grid;
+grid-template-columns:repeat(2, minmax(0,1fr));
+gap:14px 22px;
+margin:0 0 24px 0;
+}
+
+.checklist-item{
+display:flex;
+align-items:flex-start;
+gap:10px;
+color:var(--text);
+font-size:1rem;
+line-height:1.5;
+}
+
+.checklist-item::before{
+content:"✓";
+color:var(--accent);
+font-weight:900;
+font-size:1rem;
+line-height:1.4;
+flex:0 0 auto;
+margin-top:1px;
+}
+
+.cta-wrap{
+margin-top:8px;
+}
+
+.cta-button{
+display:inline-block;
+background:var(--ctaNavy);
+color:#fff;
+font-weight:900;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:.08em;
+padding:18px 24px;
+border-radius:8px;
+border:1px solid var(--ctaNavy);
+transition:opacity .2s ease;
+}
+
+.cta-button:hover{
+opacity:.92;
+}
+
+.fine-print{
+margin-top:14px;
+color:var(--subtle);
+font-size:.92rem;
+line-height:1.55;
+}
+
+.kpis{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:5%;
+margin-bottom:5%;
+}
+
+.kpis>div{
+min-width:120px;
+text-align:center;
+margin:2% 0;
+}
+
+.kpi-label{
+font-size:.75rem;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:var(--subtle);
+font-weight:800;
+}
+
+.kpi-value{
+font-size:clamp(1.3rem,5vw,2rem);
+font-weight:900;
+color:var(--heading);
+}
+
+.story{
+width:100%;
+max-width:900px;
+margin:0 auto;
+text-align:left;
+}
+
+.story-item{
+margin-bottom:6%;
+padding-bottom:5%;
+border-bottom:1px solid #f1f5f9;
+}
+
+.story-title{
+font-size:.85rem;
+font-weight:900;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:var(--heading);
+margin-bottom:2%;
+}
+
+.story p{
+color:var(--muted);
+font-size:1rem;
+margin:0 0 16px 0;
+line-height:1.6;
+}
+
+.steps{
+display:flex;
+flex-direction:column;
+gap:0;
+}
+
+.step{
+display:flex;
+align-items:flex-start;
+gap:18px;
+padding:0 0 22px 0;
+margin-bottom:22px;
+border-bottom:1px solid #f1f5f9;
+}
+
+.step:last-child{
+margin-bottom:0;
+}
+
+.step-number{
+background:var(--ctaNavy);
+color:#fff;
+width:52px;
+height:52px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.15rem;
+font-weight:900;
+flex:0 0 52px;
+}
+
+.step-text h3{
+font-size:1.1rem;
+font-weight:800;
+color:var(--heading);
+margin:0 0 6px 0;
+}
+
+.step-text p{
+margin:0;
+}
+
+.video-grid,
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+}
+
+.video-card,
+.testimonial-card{
+border:1px solid var(--border);
+border-radius:6px;
+overflow:hidden;
+background:#fff;
+}
+
+.video-thumb{
+width:100%;
+aspect-ratio:16/9;
+background:#0f172a;
+}
+
+.video-thumb a{
+display:block;
+width:100%;
+height:100%;
+}
+
+.video-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+filter:grayscale(100%) contrast(1.05);
+transition:filter .4s ease;
+}
+
+.video-thumb:hover img{
+filter:grayscale(0%) contrast(1);
+}
+
+.video-card p{
+padding:16px;
+margin:0;
+font-weight:700;
+color:var(--text);
+background:#fff;
+line-height:1.5;
+}
+
+.result-callout{
+border-left:4px solid var(--accent);
+padding:18px 20px;
+background:#f8fafc;
+margin:20px 0;
+border-radius:0 4px 4px 0;
+color:var(--muted);
+}
+
+.quote{
+margin:40px 0 20px 0;
+font-style:italic;
+color:#475569;
+padding-left:18px;
+border-left:2px solid var(--border);
+}
+
+.testimonial-card{
+padding:22px;
+}
+
+.testimonial-card p{
+padding:0;
+margin:0 0 14px 0;
+font-style:italic;
+font-weight:400;
+color:var(--muted);
+background:transparent;
+}
+
+.author{
+font-weight:800;
+color:var(--heading);
+line-height:1.45;
+}
+
+.alt-cta{
+margin-top:30px;
+background:var(--ctaNavy);
+border-radius:8px;
+padding:28px 22px;
+text-align:center;
+}
+
+.alt-cta h3{
+font-size:clamp(1.5rem,5vw,2.2rem);
+font-weight:900;
+margin-bottom:10px;
+color:#fff;
+text-transform:uppercase;
+line-height:1.2;
+}
+
+.alt-cta p{
+font-size:1.05rem;
+margin:0 0 18px 0;
+color:#e2e8f0;
+line-height:1.6;
+}
+
+.alt-cta .cta-button{
+background:#fff;
+color:var(--ctaNavy);
+border-color:#fff;
+}
+
+.footer{
+margin-top:50px;
+padding-top:24px;
+border-top:1px solid var(--border);
+text-align:center;
+color:var(--muted);
+font-size:.98rem;
+line-height:1.7;
+}
+
+@media (max-width:640px){
+.shell{
+padding:6% 4% 10% 4%;
+}
+
+.offer-header,
+.offer-body{
+padding-left:14px;
+padding-right:14px;
+}
+
+.checklist{
+grid-template-columns:1fr;
+gap:12px;
+}
+
+.step{
+flex-direction:column;
+gap:12px;
+}
+
+.step-number{
+width:46px;
+height:46px;
+flex-basis:46px;
+}
+
+.kpis{
+gap:18px;
+}
+
+.kpis>div{
+min-width:90px;
+}
+
+.cta-button{
+width:100%;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<main class="shell">
+
+<div class="kicker">Product Marketing</div>
+<div class="tag">Lucid Strategy</div>
+
+<h1>30 Free Clips</h1>
+
+<div class="subtitle">Stop filming yourself every day. Turn one conversation into 30 viral-ready videos — for free.</div>
+
+<p class="summary">
+Lucid Strategy helps busy owners turn a single conversation into a library of short-form content. This offer gives you <strong>30 Done-For-You Video Clips</strong> at <strong>100% Free</strong>—with no editing, no posting, and no effort required on your side beyond a 45-minute chat.
+</p>
+
+<div class="divider"></div>
+
+<div class="offer-box">
+    <div class="offer-header">
+        <div class="offer-title">Get 30 Done-For-You Video Clips</div>
+        <div class="offer-stat">100% Free</div>
+        <div class="offer-subtext">No editing. No posting. No effort. Just a 45-minute chat.</div>
+    </div>
+
+    <div class="offer-body">
+        <div class="checklist">
+            <div class="checklist-item">Vertical optimized for Reels/Shorts</div>
+            <div class="checklist-item">Captions &amp; subtitles included</div>
+            <div class="checklist-item">Ready for LinkedIn, Instagram, FB</div>
+            <div class="checklist-item">We pull the best stories &amp; insights</div>
+        </div>
+
+        <div class="cta-wrap">
+            <a href="https://calendly.com/lucidstrategies/ls?month=2026-03" class="cta-button">📅 Claim Your 30 Free Clips</a>
+        </div>
+
+        <p class="fine-print">No credit card required. 45-min Zoom call. You keep the clips.</p>
+    </div>
+</div>
+
+<div class="kpis">
+    <div>
+        <div class="kpi-label">Free Clips</div>
+        <div class="kpi-value">30</div>
+    </div>
+    <div>
+        <div class="kpi-label">Cost</div>
+        <div class="kpi-value">100% Free</div>
+    </div>
+    <div>
+        <div class="kpi-label">Call Length</div>
+        <div class="kpi-value">45-Min</div>
+    </div>
+</div>
+
+<section class="story">
+
+    <div class="story-item">
+        <div class="story-title">How It Works</div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <h3>Book a 45-min Call</h3>
+                    <p>No prep needed. Just show up and talk about your business, your stories, how you help clients.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <h3>We Record &amp; Edit</h3>
+                    <p>Our team turns your conversation into 30 punchy, scroll-stopping clips with captions.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <h3>You Get the Clips</h3>
+                    <p>We send you a download link. Post them whenever you want — or let us handle that next.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="story-item">
+        <div class="story-title">This Could Be You — In Any Industry</div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-thumb">
+                    <a href="https://www.youtube.com/shorts/Tvldi7uk-E8" target="_blank">
+                        <img src="https://img.youtube.com/vi/Tvldi7uk-E8/hqdefault.jpg" alt="Robert Kiyosaki video thumbnail" loading="lazy">
+                    </a>
+                </div>
+                <p>We cut, edit, transcribe &amp; animate raw footage into gold.</p>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumb">
+                    <a href="https://www.youtube.com/shorts/C_I-oouh38k" target="_blank">
+                        <img src="https://img.youtube.com/vi/C_I-oouh38k/hqdefault.jpg" alt="Video thumbnail" loading="lazy">
+                    </a>
+                </div>
+                <p>Scroll-stopping hooks + captions = maximum virality.</p>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumb">
+                    <a href="https://www.youtube.com/shorts/I2kqWMCq6HM" target="_blank">
+                        <img src="https://img.youtube.com/vi/I2kqWMCq6HM/hqdefault.jpg" alt="Video thumbnail" loading="lazy">
+                    </a>
+                </div>
+                <p>Your story, enhanced. No matter your niche.</p>
+            </div>
+        </div>
+
+        <div class="result-callout">
+            We take one conversation and turn it into clips like these—polished, animated, and engineered to stop the scroll.
+        </div>
+    </div>
+
+    <div class="story-item">
+        <div class="story-title">What Clients Say</div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>“I’ve never been comfortable on camera. They turned a 40-minute conversation into 30 clips that actually sound like me. My LinkedIn engagement tripled.”</p>
+                <div class="author">— Michael R., Financial Advisor</div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>“The quality blew me away. Captions, pacing, hooks — all done. I just posted and got inbound leads within a week.”</p>
+                <div class="author">— Sarah T., Real Estate Broker</div>
+            </div>
+
+            <div class="testimonial-card">
+                <p>“I was skeptical about ‘free’ but the clips were so good I signed up for the monthly service immediately. Best marketing decision this year.”</p>
+                <div class="author">— David K., Construction CEO</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="story-item" style="border-bottom:none; padding-bottom:0; margin-bottom:0;">
+        <div class="story-title">Done-For-You Option</div>
+
+        <div class="alt-cta">
+            <h3>Want us to post for you?</h3>
+            <p>We also offer a done-for-you option: we schedule and publish everything. Just give us access, and we handle it.</p>
+            <a href="https://calendly.com/lucidstrategies/ls?month=2026-03" class="cta-button">👉 Book a Call to Discuss</a>
+        </div>
+    </div>
+
+    <p class="quote">
+        © Lucid Strategy — Video for Busy Owners
+    </p>
+
+</section>
+
+<div class="footer">
+    <p>© Lucid Strategy — Video for Busy Owners</p>
+    <p>info@lucid-strategy.com | 714-391-3771</p>
+</div>
+
+</main>
+</body>
+</html>
